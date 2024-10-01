@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'getdata2' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Registration Form</h1>
+        <label>Username</label>
+        <input type="text" name="name"><br><br>
+        <label>Password</label>
+        <input type="password" name="password"><br><br>
+        <label>Email</label>
+        <input type="email" name="email"><br><br>
+        <label>Phone</label>
+        <input type="phone" name="phone"><br><br>
+        <input type="submit" type="submit">
+    </form>
+</body>
+</html>
